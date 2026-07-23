@@ -1,15 +1,15 @@
 class Product:
     """
-    Represents a fruit or a vegetable sold by weight or by unit.
+    Représente un fruit ou un légume vendu au kilo ou à l'unité.
 
     Attributes
     ----------
     name : str
-        Product name.
+        Product name./Nom du produit.
     price : float
-        Product price.
+        Product price./Prix du produit.
     stock : float
-        Available quantity.
+        Available quantity./Quantité disponible.
     unit : str
         'kg' or 'unit'.
     category : str
@@ -25,7 +25,7 @@ class Product:
 
     def sell(self, quantity):
         """
-        Removes a quantity from the stock.
+        Retire une quantité du stock.
 
         Parameters
         ----------
@@ -34,7 +34,7 @@ class Product:
         Returns
         -------
         bool
-            True if the sale can be completed.
+        True si la vente est possible.
         """
         if quantity <= self.stock:
             self.stock -= quantity
@@ -43,6 +43,6 @@ class Product:
 
     def display(self):
         """
-        Displays the product information.
+        Affiche les informations du produit.
         """
         print(f"{self.name:<20} {self.stock} {self.unit} - {self.price:.2f} €/ {self.unit}")
